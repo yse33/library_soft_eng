@@ -1,0 +1,19 @@
+---------- coverage: platform win32, python 3.9.13-final-0 -----------
+Name         Stmts   Miss  Cover   Missing
+------------------------------------------
+library.py      21      0   100%
+------------------------------------------
+TOTAL           21      0   100%
+
+
+======================================================================================== 7 passed in 0.07s =========================================================================================
+nox > coverage report -m
+Name         Stmts   Miss  Cover   Missing
+------------------------------------------
+library.py      21      0   100%
+------------------------------------------
+TOTAL           21      0   100%
+nox > Session tests-3.9 was successful.
+nox > Ran multiple sessions:
+nox > * tests-3.8: skipped
+nox > * tests-3.9: success
