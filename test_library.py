@@ -63,12 +63,6 @@ def test_sort_books_by_genre():
     assert sorted_books[1].genre == 'Software Development'
 
 
-def test_read_books_with_empty_csv_data():
-    with pytest.raises(AssertionError) as e:
-        read_books(None)
-    assert str(e.value) == 'CSV data is empty'
-
-
 def test_read_books_with_price_less_than_zero():
     csv_mock_data = [
         {

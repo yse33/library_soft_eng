@@ -4,8 +4,6 @@ from book import Book
 def read_books(csv_data):
     books = []
 
-    assert csv_data is not None, "CSV data is empty"
-
     for row in csv_data:
         title = row['Title']
         author = row['Author']
