@@ -1,9 +1,19 @@
+"""
+main.py: A script for reading and sorting a CSV file containing books information.
+"""
+
 import os
 import csv
-from library import *
+from library import (
+    read_books, sort_books_by_title,
+    sort_books_by_author, sort_books_by_price, sort_books_by_genre
+)
 
 
 def main():
+    """
+    Main function for executing the book reading and sorting process.
+    """
     while True:
         file_path = input("Enter the file path: ")
 
@@ -14,10 +24,11 @@ def main():
     assert os.path.exists(file_path), "File not found"
 
     try:
-        with open(file_path, mode='r', newline='') as file:
+        with open(file_path, mode='r', newline='', encoding='utf-8') as file:
             csv_data = csv.DictReader(file)
             try:
-                assert csv_data.fieldnames is not None, "CSV file is empty. No data found to be sorted."
+                assert csv_data.fieldnames is not None, \
+                    "CSV file is empty. No data found to be sorted."
             except AssertionError as e:
                 print(e)
                 return
@@ -41,6 +52,15 @@ def main():
 
 
 def print_books(books):
+    """
+    Print the details of books in a formatted manner.
+
+    Args:
+        books (list): A list of book dictionaries.
+
+    Returns:
+        None
+    """
     for book in books:
         print(book)
 

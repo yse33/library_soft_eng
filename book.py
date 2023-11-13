@@ -7,4 +7,5 @@ class Book:
         self.genre = genre
 
     def __str__(self):
-        return f"{self.title} by {self.author} - Price: ${self.price}, ISBN: {self.isbn}, Genre: {self.genre}"
+        return (f"{self.title} by {self.author} - Price: ${self.price},"
+                f" ISBN: {self.isbn}, Genre: {self.genre}")
